@@ -26,6 +26,16 @@ $(function () {
     }
   });
 
+  // Get user input from local storage and set the textarea values
+  $(".time-block").each(function () {
+    var timeBlockId = $(this).attr("id");
+    var userInput = localStorage.getItem(timeBlockId);
+
+    if (userInput) {
+      $(this).find(".description").val(userInput);
+    }
+  });
+
   // Display the current date in the header
   var currentDate = dayjs().format("dddd, MMMM D, YYYY");
   $("#currentDay").text(currentDate);

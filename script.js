@@ -14,7 +14,9 @@ $(function () {
     var timeBlockId = $(this).attr("id");
     var currentHour = dayjs().hour();
     var timeBlockHour = parseInt(timeBlockId.split("-")[1]);
-
+    //reset all the classes
+    $(this).removeClass("past present future");
+    // Apply past, present, or future class to each time block
     if (timeBlockHour < currentHour) {
       $(this).addClass("past");
     } else if (timeBlockHour === currentHour) {
@@ -24,17 +26,16 @@ $(function () {
     }
   });
 
-  // Get user input from local storage and set the textarea values
-  $(".time-block").each(function () {
-    var timeBlockId = $(this).attr("id");
-    var userInput = localStorage.getItem(timeBlockId);
-
-    if (userInput) {
-      $(this).find(".description").val(userInput);
-    }
-  });
-
   // Display the current date in the header
   var currentDate = dayjs().format("dddd, MMMM D, YYYY");
   $("#currentDay").text(currentDate);
+
+  // Function to update the current time
+   function updateCurrentTime() {
+    var currentTime = dayjs().format("h:mm:ss A");
+    $("#currentTime").text("Current Time: " + currentTime);
+  }
+  
+  // Update the current time every second
+  setInterval(updateCurrentTime, 1000);
 });

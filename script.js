@@ -24,13 +24,8 @@ $(function () {
     } else {
       $(this).addClass("future");
     }
-  });
-
-  // Get user input from local storage and set the textarea values
-  $(".time-block").each(function () {
-    var timeBlockId = $(this).attr("id");
+    // Get the user input from local storage
     var userInput = localStorage.getItem(timeBlockId);
-
     if (userInput) {
       $(this).find(".description").val(userInput);
     }
@@ -48,4 +43,7 @@ $(function () {
   
   // Update the current time every second
   setInterval(updateCurrentTime, 1000);
+
+  // Display the instructions
+  $("#instructions").text("⚪ Past |🔴 Present |🟢 Future");
 });

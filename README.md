@@ -13,7 +13,7 @@ a simple calendar application that allows a user to save events for each hour of
 - if your current time is in the (9am-5pm) calendar will be red (Present) showing you the current hour of the work day!
 
 - Here is a representation in coding:
-if (CurrentTime > 5pm || CurrentTime < 9am)
+if (CurrentTime > 5pm && CurrentTime < 9am)
 {
   Not at work!
 }

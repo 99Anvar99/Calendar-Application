@@ -10,7 +10,7 @@ a simple calendar application that allows a user to save events for each hour of
 - if your current time is before 9am the calendar will be green(future) showing that work day is not started yet!
 - if your current time is in the (9am-5pm) calendar will be red (Present) showing you the current hour of the work day!
 
-- Here is a representation in coding
+- Here is a representation in coding:
 if (CurrentTime > 5pm || CurrentTime < 9am)
 {
   Not at work!

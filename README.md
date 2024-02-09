@@ -1,5 +1,3 @@
-Deployed page: https://99anvar99.github.io/Calendar-Application/
-
 # Calendar-Application
 ![Screenshot_Calendar](https://github.com/99Anvar99/Calendar-Application/assets/60616540/34420f07-28af-457b-80e1-5b1d72e2dbe2)
 
